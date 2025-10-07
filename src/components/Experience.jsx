@@ -55,7 +55,8 @@ const Experience = () => {
             transition={{ duration: 0.5, delay: i * 0.05 }}
             className="space-y-4"
           >
-            <div className="flex items-start justify-between">
+            {/* Desktop layout - hidden on mobile */}
+            <div className="hidden md:flex items-start justify-between">
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">{exp.position}</h3>
                 <div className="flex items-center gap-2 text-primary font-medium">
@@ -75,6 +76,11 @@ const Experience = () => {
             
             {/* Mobile layout - hidden on large screens */}
             <div className="md:hidden space-y-2">
+              <h3 className="text-xl font-semibold">{exp.position}</h3>
+              <div className="flex items-center gap-2 text-primary font-medium">
+                <Building className="h-4 w-4" />
+                {exp.company}
+              </div>
               <div className="flex flex-col gap-2 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <Calendar className="h-3 w-3" /> {exp.duration}
