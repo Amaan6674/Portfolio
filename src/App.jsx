@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import About from './components/About'
 import Skills from './components/Skills'
@@ -7,8 +7,19 @@ import Education from './components/Education'
 import Research from './components/Research'
 import Projects from './components/Projects'
 import Highlights from './components/Highlights'
+import Loader from './components/Loader'
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false)
+  }
+
+  if (isLoading) {
+    return <Loader onComplete={handleLoadingComplete} />
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-6 py-10">
