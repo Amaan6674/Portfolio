@@ -14,7 +14,7 @@ const About = () => {
         <div className="flex justify-center mb-4">
           <div className="relative">
             <img 
-              src="/src/assets/profile.png" 
+              src="/src/assets/amaan.png" 
               alt="Amaan Shaikh" 
               className="w-28 h-28 rounded-full object-cover object-top border-4 border-primary/20"
             />
