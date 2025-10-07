@@ -14,7 +14,7 @@ const About = () => {
         <div className="flex justify-center mb-4">
           <div className="relative">
             <img 
-              src="/src/assets/amaan.png" 
+              src="/amaan.png" 
               alt="Amaan Shaikh" 
               className="w-28 h-28 rounded-full object-cover object-top border-4 border-primary/20"
             />
@@ -45,7 +45,7 @@ const About = () => {
         </p>
 
         <div className="flex flex-wrap gap-3">
-          <a href="/src/assets/Amaan_CV.pdf" download className="px-3 py-2 bg-primary text-primary-foreground rounded-md text-sm inline-flex items-center gap-2">
+          <a href="/Amaan_CV.pdf" download className="px-3 py-2 bg-primary text-primary-foreground rounded-md text-sm inline-flex items-center gap-2">
             <Download className="h-4 w-4" /> Resume
           </a>
           <a href="mailto:amaanshaikh6674@gmail.com" className="px-3 py-2 border border-border rounded-md text-sm inline-flex items-center gap-2 hover:bg-accent">
