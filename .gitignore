@@ -8,3 +8,6 @@ yarn-error.log*
 
 # Vite build output
 dist/
+
+# macOS Finder metadata
+.DS_Store
