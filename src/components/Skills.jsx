@@ -30,6 +30,7 @@ const Skills = () => {
         "Django",
         "Flask",
         "Express",
+        "LangChain",
         "TensorFlow",
         "scikit-learn",
         "Pandas",
