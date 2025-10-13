@@ -25,6 +25,9 @@ const Skills = () => {
       title: "Frameworks & Libraries",
       icon: <Globe className="h-4 w-4" />,
       skills: [
+        "LangChain",
+        "LangGraph",
+        "n8n",
         "React",
         "Node.js",
         "Django",
