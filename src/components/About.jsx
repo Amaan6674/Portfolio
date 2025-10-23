@@ -1,7 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
-import { User, MapPin, Calendar, Mail, Linkedin, Download, Github } from 'lucide-react'
+import { useState } from 'react'
+import { User, MapPin, Calendar, Mail, Linkedin, Download, Github, X } from 'lucide-react'
 
 const About = () => {
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <Card className="transition-all duration-300">
       <CardHeader>
@@ -45,9 +48,14 @@ const About = () => {
         </p>
 
         <div className="flex flex-wrap gap-3">
-          <a href="/Amaan_CV.pdf" download className="px-3 py-2 bg-primary text-primary-foreground rounded-md text-sm inline-flex items-center gap-2">
-            <Download className="h-4 w-4" /> Resume
-          </a>
+          {/* Single button that opens language selection modal */}
+          <button
+            type="button"
+            onClick={() => setShowModal(true)}
+            className="px-3 py-2 bg-primary text-primary-foreground rounded-md text-sm inline-flex items-center gap-2"
+          >
+            <Download className="h-4 w-4" /> Download Resume
+          </button>
           <a href="mailto:amaanshaikh6674@gmail.com" className="px-3 py-2 border border-border rounded-md text-sm inline-flex items-center gap-2 hover:bg-accent">
             <Mail className="h-4 w-4" /> Contact Me
           </a>
@@ -79,6 +87,29 @@ const About = () => {
           </a>
         </div>
       </CardContent>
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/50" onClick={() => setShowModal(false)} />
+          <div className="relative bg-background rounded-lg p-6 w-11/12 max-w-md shadow-lg">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-semibold">Download Resume</h3>
+              <button className="p-1 rounded hover:bg-accent" onClick={() => setShowModal(false)} aria-label="Close">
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">Choose a language for the resume download:</p>
+            <div className="flex flex-col gap-3">
+              <a href="/Amaan_CV_EN.pdf" download className="px-3 py-2 bg-primary text-primary-foreground rounded-md text-sm inline-flex items-center gap-2 justify-center">
+                <Download className="h-4 w-4" /> English (EN)
+              </a>
+              <a href="/Amaan_CV_DE.pdf" download className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md text-sm inline-flex items-center gap-2 justify-center">
+                <Download className="h-4 w-4" /> Deutsch (DE)
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </Card>
   )
 }
