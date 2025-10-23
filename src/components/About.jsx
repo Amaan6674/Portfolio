@@ -1,9 +1,18 @@
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
-import { useState } from 'react'
-import { User, MapPin, Calendar, Mail, Linkedin, Download, Github, X } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { useState } from "react";
+import {
+  User,
+  MapPin,
+  Calendar,
+  Mail,
+  Linkedin,
+  Download,
+  Github,
+  X,
+} from "lucide-react";
 
 const About = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <Card className="transition-all duration-300">
@@ -16,9 +25,9 @@ const About = () => {
       <CardContent className="space-y-4">
         <div className="flex justify-center mb-4">
           <div className="relative">
-            <img 
-              src="/amaan.png" 
-              alt="Amaan Shaikh" 
+            <img
+              src="/amaan.png"
+              alt="Amaan Shaikh"
               className="w-28 h-28 rounded-full object-cover object-top border-4 border-primary/20"
             />
             <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background"></div>
@@ -36,7 +45,7 @@ const About = () => {
             <MapPin className="h-4 w-4" />
             <span>Berlin, Germany</span>
           </div>
-          
+
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Calendar className="h-4 w-4" />
             <span>Available for opportunities</span>
@@ -44,7 +53,9 @@ const About = () => {
         </div>
 
         <p className="text-sm text-muted-foreground leading-relaxed">
-        A Software Developer turned Data Science Student with 2+ years of experience in building full-stack applications , contributing to end-to-end development , and solving complex software challenges.
+          A Software Developer turned Data Science Student with 2+ years of
+          experience in building full-stack applications , contributing to
+          end-to-end development , and solving complex software challenges.
         </p>
 
         <div className="flex flex-wrap gap-3">
@@ -56,7 +67,10 @@ const About = () => {
           >
             <Download className="h-4 w-4" /> Download Resume
           </button>
-          <a href="mailto:amaanshaikh6674@gmail.com" className="px-3 py-2 border border-border rounded-md text-sm inline-flex items-center gap-2 hover:bg-accent">
+          <a
+            href="mailto:amaanshaikh6674@gmail.com"
+            className="px-3 py-2 border border-border rounded-md text-sm inline-flex items-center gap-2 hover:bg-accent"
+          >
             <Mail className="h-4 w-4" /> Contact Me
           </a>
         </div>
@@ -79,10 +93,20 @@ const About = () => {
         </div>
         <div className="border-t border-border" />
         <div className="flex justify-center gap-3">
-          <a href="https://www.linkedin.com/in/amaan330" target="_blank" rel="noreferrer" className="p-2 rounded-md border border-border hover:bg-accent inline-flex">
+          <a
+            href="https://www.linkedin.com/in/amaan330"
+            target="_blank"
+            rel="noreferrer"
+            className="p-2 rounded-md border border-border hover:bg-accent inline-flex"
+          >
             <Linkedin className="h-4 w-4" />
           </a>
-          <a href="https://github.com/Amaan6674" target="_blank" rel="noreferrer" className="p-2 rounded-md border border-border hover:bg-accent inline-flex">
+          <a
+            href="https://github.com/Amaan6674"
+            target="_blank"
+            rel="noreferrer"
+            className="p-2 rounded-md border border-border hover:bg-accent inline-flex"
+          >
             <Github className="h-4 w-4" />
           </a>
         </div>
@@ -90,20 +114,37 @@ const About = () => {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-black/50" onClick={() => setShowModal(false)} />
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setShowModal(false)}
+          />
           <div className="relative bg-background rounded-lg p-6 w-11/12 max-w-md shadow-lg">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-semibold">Download Resume</h3>
-              <button className="p-1 rounded hover:bg-accent" onClick={() => setShowModal(false)} aria-label="Close">
+              <button
+                className="p-1 rounded hover:bg-accent"
+                onClick={() => setShowModal(false)}
+                aria-label="Close"
+              >
                 <X className="h-4 w-4" />
               </button>
             </div>
-            <p className="text-sm text-muted-foreground mb-4">Choose a language for the resume download:</p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Choose a language for the resume download:
+            </p>
             <div className="flex flex-col gap-3">
-              <a href="/Amaan_CV_EN.pdf" download className="px-3 py-2 bg-primary text-primary-foreground rounded-md text-sm inline-flex items-center gap-2 justify-center">
+              <a
+                href="/Amaan_CV_EN.pdf"
+                download
+                className="px-3 py-2 bg-primary text-primary-foreground rounded-md text-sm inline-flex items-center gap-2 justify-center"
+              >
                 <Download className="h-4 w-4" /> English (EN)
               </a>
-              <a href="/Amaan_CV_DE.pdf" download className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md text-sm inline-flex items-center gap-2 justify-center">
+              <a
+                href="/Amaan_CV_DE.pdf"
+                download
+                className="px-3 py-2 bg-secondary text-secondary-foreground rounded-md text-sm inline-flex items-center gap-2 justify-center"
+              >
                 <Download className="h-4 w-4" /> Deutsch (DE)
               </a>
             </div>
@@ -111,7 +152,7 @@ const About = () => {
         </div>
       )}
     </Card>
-  )
-}
+  );
+};
 
-export default About
+export default About;
