@@ -7,9 +7,17 @@ import { Code, ExternalLink, Github } from 'lucide-react'
 const Projects = () => {
   const projects = [
     {
+      title: 'AI Review Analyzer - Intelligent Customer Support',
+      description:
+        'AI-powered review analysis system that detects sentiment, diagnoses issues, and generates personalized responses using LangGraph and Groq AI.',
+      technologies: ['Python', 'LangGraph', 'Streamlit', 'Groq', 'LangChain'],
+      demo: 'https://ai-review-analyzer.streamlit.app',
+      github: 'https://github.com/Amaan6674/ai-review-analyzer',
+    },
+    {
       title: 'Prescribe.ME - Voice Prescription using NLU',
       description:
-        "Convert doctors’ voice inputs into structured PDF prescriptions using NLU with high slot/intent accuracy.",
+        "Convert doctors' voice inputs into structured PDF prescriptions using NLU with high slot/intent accuracy.",
       technologies: ['Python', 'Django', 'SQL', 'TensorFlow', 'NLP'],
       demo: 'https://youtu.be/sDKmNwaeFWo?si=RiuCrMzZ2l8hiCh5',
     },
